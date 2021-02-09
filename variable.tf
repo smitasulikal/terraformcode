@@ -1,12 +1,10 @@
-variable "instance-names" {
-  type    = list
-  instance-names = ["ec2-apSouth1a", "ec2-apSouth1b", "ec2-apSouth1c"]
+variable "instance_names" {
+  type    = list(string)
   description = "EC2 instance names"
 }
 
-variable "az" {
-  type = list
-  az = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+variable "azs" {
+  type = list(string)
   description = "Availability Zones list"
 }
 
