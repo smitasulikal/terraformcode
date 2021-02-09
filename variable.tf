@@ -1,10 +1,12 @@
 variable "instance-names" {
   type    = list
+  instance-names = ["ec2-apSouth1a", "ec2-apSouth1b", "ec2-apSouth1c"]
   description = "EC2 instance names"
 }
 
 variable "az" {
   type = list
+  az = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
   description = "Availability Zones list"
 }
 
