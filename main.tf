@@ -1,15 +1,11 @@
-provider "aws" {
-  region = "ap-south-1"
-  access_key = ""
-  secret_key = ""
-}
+# EC2 instance creation
 
 resource "aws_instance" "myec2" {
-  ami               = "ami-08e0ca9924195beba"
-  instance_type     = "t2.nano"
+  ami               = var.ami
+  instance_type     = var.instance_type
   #availability_zone = element(["ap-south-1a", "ap-south-1b", "ap-south-1c"], count.index)
   availability_zone = var.az[count.index]
-  count             = 3
+  count             = var.counts
 
   tags = {
     Name = var.instance-names[count.index]

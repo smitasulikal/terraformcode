@@ -1,0 +1,6 @@
+# mention all the items to be ignored while commiting.
+
+.terraform/*
+.terraform*
+terraform.tfstate
+terraform.tfstate*
