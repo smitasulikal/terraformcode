@@ -1,12 +1,10 @@
 variable "instance_names" {
   type    = list(string)
-  default = ["ec2-apSouth1a", "ec2-apSouth1b", "ec2-apSouth1c"]
   description = "EC2 instance names"
 }
 
 variable "azs" {
   type = list(string)
-  default = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
   description = "Availability Zones list"
 }
 
